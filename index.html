@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND ME .....</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #input {
+        margin-top: 30px;
+        margin-bottom: 30px;
+       justify-content: center;
+        display: flex;
+    }
+    #entered:hover{
+        border: 2px solid rgb(41, 245, 22);
+        
+    }
+    #head{
+        justify-content: center;
+        display: flex;
+    }
+</style>
+
+<body>
+
+    <nav id="head">
+        <h2>
+            FIND ME
+        </h2>
+    </nav>
+<hr>
+<div  id="input" >
+
+    <input placeholder="Enter a number"  class="in" onchange="valu()" id="entered" type="tel" minlength="0" maxlength="100">
+
+
+</div>
+<hr>
+
+
+</body>
+
+<script>
+    let num = Math.floor(Math.random() * 101);
+    console.log(num);
+
+    function valu() {
+        let val = document.getElementById("entered").value
+        console.log(val);
+
+
+        if (val > num) {
+            console.log("the entered value is greater :");
+        }
+        else if (val < num) {
+            console.log("the entered value is smaller :");
+
+        }
+        else if (val == num) {
+            console.log("YOU WON THE MATCH");
+
+        }
+
+
+    }
+
+
+</script>
+
+</html>
