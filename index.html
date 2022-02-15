@@ -18,11 +18,13 @@
         margin-bottom: 30px;
        justify-content: center;
         display: flex;
+    
     }
     #entered:hover{
         border: 2px solid rgb(41, 245, 22);
         
     }
+   
     #head{
         justify-content: center;
         display: flex;
@@ -44,7 +46,9 @@
 
 </div>
 <hr>
+<div id="output">
 
+</div>
 
 </body>
 
@@ -55,13 +59,16 @@
     function valu() {
         let val = document.getElementById("entered").value
         console.log(val);
+      let output =   document.getElementById('output')
 
 
         if (val > num) {
             console.log("the entered value is greater :");
+            output.innerHTML += `the entered value is greater <br>`
         }
         else if (val < num) {
             console.log("the entered value is smaller :");
+            output.innerHTML += `the entered value is smaller <br>`
 
         }
         else if (val == num) {
