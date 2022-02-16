@@ -16,28 +16,34 @@
     #input {
         margin-top: 30px;
         margin-bottom: 30px;
-       justify-content: center;
+        justify-content: center;
         display: flex;
-    
+
     }
-    #entered:hover{
+
+    #entered:hover {
         border: 2px solid rgb(41, 245, 22);
-        
+
     }
-   #output{
-       text-align: center;
-   }
-    #head{
+
+    #output {
+        text-align: center;
+    }
+
+    #head {
         justify-content: center;
         display: flex;
     }
-    #smaller{
+
+    #smaller {
         color: rgb(231, 21, 21);
     }
-    #greater{
+
+    #greater {
         color: rgb(40, 164, 246);
     }
-    #win{
+
+    #win {
         color: rgb(11, 230, 11);
         font-size: 70px;
     }
@@ -50,17 +56,18 @@
             FIND ME
         </h2>
     </nav>
-<hr>
-<div  id="input" >
+    <hr>
+    <div id="input">
 
-    <input placeholder="Enter a number"  class="in" onchange="valu()" id="entered" type="tel" minlength="0" maxlength="100">
+        <input placeholder="Enter a number" class="in" onchange="valu()" id="entered" type="tel" minlength="0"
+            maxlength="100">
 
 
-</div>
-<hr>
-<div id="output">
+    </div>
+    <hr>
+    <div id="output">
 
-</div>
+    </div>
 
 </body>
 
@@ -71,7 +78,7 @@
     function valu() {
         let val = document.getElementById("entered").value
         console.log(val);
-      let output =   document.getElementById('output')
+        let output = document.getElementById('output')
 
 
         if (val > num) {
@@ -85,7 +92,7 @@
         }
         else if (val == num) {
             console.log("YOU WON THE MATCH");
-            output.innerHTML += `<p id="win">YOU WON!!!</p> <br>`
+            output.innerHTML += `<p id="win">YOU WON!!! <br> ${num} </p> <br>`
             document.getElementById("entered").disabled = true
 
         }
